@@ -1,0 +1,10 @@
+host: localhost:8080
+info:
+  contact:
+    email: mfarhaan@presidio.com
+    name: Mohamed Farhaan
+  description: This is a sample project to demonstate CRUD ousing GoLand Rest API
+  title: Project 2 on GoLangApi
+  version: "1.0"
+paths: {}
+swagger: "2.0"

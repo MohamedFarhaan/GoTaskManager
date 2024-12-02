@@ -1,0 +1,14 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a sample project to demonstate CRUD ousing GoLand Rest API",
+        "title": "Project 2 on GoLangApi",
+        "contact": {
+            "name": "Mohamed Farhaan",
+            "email": "mfarhaan@presidio.com"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost:8080",
+    "paths": {}
+}
