@@ -3,6 +3,9 @@
 ## Overview
 This project is a To-Do Task Management System designed to facilitate the creation, updating, and tracking of tasks. Each task is defined by a title, description, and status. Tasks that do not reach the "completed" status within one hour of creation are automatically invalidated, with their status updated to "critical".
 
+## Run project in local:  
+Use `go run main.go` in the main root folder of the repository to start the server locally.
+
 ## API Endpoints
 The system provides five RESTful API endpoints to manage tasks:  
 
