@@ -1,12 +1,12 @@
-#Task Management System
+# Task Management System
 
-##Overview
+## Overview
 This project is a To-Do Task Management System designed to facilitate the creation, updating, and tracking of tasks. Each task is defined by a title, description, and status. Tasks that do not reach the "completed" status within one hour of creation are automatically invalidated, with their status updated to "critical".
 
-##API Endpoints
+## API Endpoints
 The system provides five RESTful API endpoints to manage tasks:
 
-###Get All Tasks [GET]
+### Get All Tasks [GET]
 **Description**: Retrieves a list of all tasks stored in the database.
 **API URL**: http://localhost:8080/tasks
 **Returns**: An array of task objects with the following structure:
@@ -23,7 +23,7 @@ The system provides five RESTful API endpoints to manage tasks:
 ]
 ```
 
-###Get Task [GET]
+### Get Task [GET]
 **Description**: Retrieves a specific task by its unique identifier.
 **API URL**: http://localhost:8080/tasks/{taskId}
 **Parameters**:
@@ -39,7 +39,7 @@ The system provides five RESTful API endpoints to manage tasks:
       }
       ```
 
-###Create Task [POST]
+### Create Task [POST]
 **Description**: Creates a new task in the database.
 **API URL**: http://localhost:8080/tasks
 **Request Body**:
@@ -62,7 +62,7 @@ The system provides five RESTful API endpoints to manage tasks:
     ```
 
 
-###Update Task [PUT]
+### Update Task [PUT]
 **Description**: Updates an existing task in the database.
 **API URL**: http://localhost:8080/tasks/{taskId}
 **Request Body**:
@@ -86,15 +86,15 @@ The system provides five RESTful API endpoints to manage tasks:
     ```
 
 
-###Delete Task [DELETE]
+### Delete Task [DELETE]
 **Description**: Deletes a specific task from the database.
 **API URL**: http://localhost:8080/tasks/{taskId}
 **Parameters**:
   * *taskId* *: The unique identifier of the task to be deleted.
 
-##Task Invalidation Mechanism
+## Task Invalidation Mechanism
 A cron job is implemented to automatically invalidate tasks that have not been marked as "completed" within one hour of their creation. Tasks that meet this criterion will have their status updated to "critical."
 
-###Cron Job Details
+### Cron Job Details
 **Action**: Updates the status of tasks to "critical" if they are not in the "completed" status and were created more than one hour ago.
 **Frequency**: The cron job runs periodically to check and update task statuses as needed.
